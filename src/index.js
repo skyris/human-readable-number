@@ -33,9 +33,7 @@ module.exports = function toReadable (number) {
         '9': 'ninety',
     }
 
-    let num = number.toString()
-    while (num.length < 3) num = "0" + num 
-
+    let num = number.toString().padStart(3, '0');
     // zero
     if (num === '000') return 'zero'
     const result = []
